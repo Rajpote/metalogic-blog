@@ -6,11 +6,10 @@ import { BlogCardProps } from "./type";
 const Hero = ({ title, description, date, slug, image }: BlogCardProps) => {
    return (
       <section className="bg-white dark:bg-gray-900 text-gray-900 dark:text-white px-6 md:px-20 py-20 text-center transition-colors duration-300">
-         <h1 className="text-4xl md:text-5xl font-extrabold mb-4">
+         <h1 className="text-4xl md:text-5xl font-extrabold mb-4 animate-fadeUp">
             Welcome to <span className="text-red-600 dark:text-red-400">Metalogic</span> Blog
          </h1>
-         <p className="text-lg md:text-xl max-w-2xl mx-auto opacity-80 dark:opacity-90">Stay updated with the latest insights and articles on tech, development, and more!</p>
-
+         <p className="text-lg md:text-xl max-w-2xl mx-auto opacity-80 dark:opacity-90 animate-fadeUp delay-200">Stay updated with the latest insights and articles on tech, development, and more!</p>
          <div className="mt-16">
             <h2 className="text-2xl md:text-3xl font-semibold mb-6">📌 Featured Blog</h2>
 

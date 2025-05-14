@@ -1,17 +1,11 @@
 "use client";
 
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 const Navbar = () => {
    const [isOpen, setIsOpen] = useState(false);
    const toggleMenu = () => setIsOpen(!isOpen);
-
-   // Optional: Persist theme (basic toggle logic can be handled in layout.tsx)
-   const [theme, setTheme] = useState("light");
-   useEffect(() => {
-      document.documentElement.classList.toggle("dark", theme === "dark");
-   }, [theme]);
 
    return (
       <header className="bg-white dark:bg-gray-900 shadow-md sticky top-0 z-50 transition duration-300">
@@ -44,9 +38,6 @@ const Navbar = () => {
 
                {/* Right: Get in Touch */}
                <div className="hidden md:flex items-center space-x-4">
-                  <button onClick={() => setTheme(theme === "dark" ? "light" : "dark")} className="text-sm text-gray-600 dark:text-gray-300 hover:text-red-500">
-                     {theme === "dark" ? "🌞 Light" : "🌙 Dark"}
-                  </button>
                   <Link href="/contact" className="bg-red-600 text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-red-700 transition">
                      Get in Touch
                   </Link>
